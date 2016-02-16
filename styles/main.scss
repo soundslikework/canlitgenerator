@@ -1,0 +1,162 @@
+//VARIABLES AND IMPORTS
+
+@import "setup";
+
+$heading: 'Oswald', sans-serif;
+$paragraph: 'Old Standard TT', serif;
+$mainText: white;
+$parText: white;
+
+
+//OVERALL LAYOUT AND DISPLAY
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+body {
+	font-size: 62.5%;
+	height: 100vh;
+	// background-size: cover;
+	// background-repeat: no-repeat;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: space-between;
+	// filter: grayscale(1);
+}
+div.backgroundContainer {
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: sepia(0.4) contrast(0.6) saturate(1.5) brightness(0.7);
+	// filter: sepia(0.4) contrast(0.6);
+	-webkit-filter: sepia(0.4) contrast(0.6) saturate(1.5) brightness(0.7);
+	// -webkit-filter: sepia(0.4) contrast(0.6);
+	position: relative;
+	z-index: 0;
+}
+header {
+	text-transform: uppercase;
+	position: relative;
+	.tweetButton {
+	position: absolute; 
+	top: 5px;
+	right: 5px;
+	}
+}
+.wrapper {
+	max-width: 1080px;
+	margin: 0 auto;
+}
+.content {
+	width: 80%;
+	height: 300px;
+	margin: 0 auto;
+	@media (max-width: 700px) {
+		width: 95%;
+		height: 25%;
+	}
+	p {
+		line-height: 110%;
+		padding: 10px;
+		background: rgba(0, 0, 0, 0.3);
+		border-radius: 10px;
+		&:first-letter {
+			font-size: 180%;
+			color: #b3003b;
+			padding: 10px 0 0 0;
+		}
+	}
+}
+.contentBox {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+footer {
+	width: 100%;
+	background: rgba(0, 0, 0, 0.2);
+	.wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: flex-end;
+	@media(max-width: 700px) {
+		flex-direction: column;
+	}
+	.left {
+		text-align: left;
+	}
+	.left, .right {
+		width: 50%;
+		margin: 0;
+		@media(max-width: 700px) {
+			width: 100%;
+		}
+		}	
+	}
+	a {
+		color: $mainText;
+	}
+	p {
+		font-size: 1rem;
+		padding: 0 5px 0;
+		margin: 0;
+		@media(max-width: 700px) {
+			font-size: 0.8rem;
+			text-align: center;
+		}
+	}
+}
+
+//FONTS AND CLASS OVERRIDES
+h1 {
+	font-family: $heading;
+	text-align: center;
+	font-size: 3rem;
+	margin: 0;
+	color: $mainText;
+	@media (max-width: 700px) {
+		font-size: 2rem;
+		text-align: left;
+	}
+	@media(max-width: 500px) {
+		font-size: 1.6rem;
+	}
+}
+p { 
+	font-family: $paragraph;
+	color: $parText;
+	font-size: 2.5rem;
+}
+button {
+	color: $mainText;
+	font-family: $heading;
+	font-size: 1.1rem;
+	margin: 1% auto;
+	display: block;
+	width: 25%;
+	padding: 20px;
+	border-radius: 10px;
+	background: rgba(0,0,0,0.4);
+	border: 0;
+	transition: all 1s;
+	@media(max-width: 700px) {
+		font-size: 1.4rem;
+		width: 35%;
+	}
+	@media(max-width: 500px) {
+		width: 50%;
+	}
+	&:hover {
+		background: rgba(0,0,0,0.9);
+	}
+}
+.italic {
+	font-style: italic;
+}
