@@ -91,9 +91,15 @@ footer {
 	}
 	.left {
 		text-align: left;
+		p {
+			font-size: 0.9rem;
+		}
 	}
-	.left, .right {
-		width: 50%;
+	.center {
+		text-align: center;
+	}
+	.left, .right, .center {
+		width: 33%;
 		margin: 0;
 		@media(max-width: 700px) {
 			width: 100%;
@@ -108,7 +114,7 @@ footer {
 		padding: 0 5px 0;
 		margin: 0;
 		@media(max-width: 700px) {
-			font-size: 0.8rem;
+			font-size: 1.4rem;
 			text-align: center;
 		}
 	}
