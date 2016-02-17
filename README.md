@@ -5,7 +5,6 @@ Live edits of the CanLit Generator site. Check out the site at http://www.canlit
 
 Upcoming Changes
 ---
-*Google Form to submit suggestions
 
 *Link content to Google Docs for dynamic updating of possiblities
 
