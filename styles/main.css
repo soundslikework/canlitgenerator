@@ -184,7 +184,7 @@ h1 {
 
 @media (max-width: 500px) {
   h1 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -286,6 +286,7 @@ header .tweetButton {
   .content {
     overflow-y: scroll;
     width: 95%;
+    padding: 10px;
   }
 }
 
@@ -314,6 +315,7 @@ header .tweetButton {
 @media (max-width: 500px) {
   .content p {
     font-size: 1.2rem;
+    padding: 20px;
   }
 }
 
