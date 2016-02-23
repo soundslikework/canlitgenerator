@@ -14,5 +14,4 @@ Upcoming Changes
 
 *Title suggestions
 
-*Clean up code
 
