@@ -49,7 +49,6 @@ canGen.getPhoto = function(){
 };
 
 canGen.getCredit = function(){	
-	console.log(canGen.userId);
 	$.ajax({
 		url: 'https://api.flickr.com/services/rest/',
 		method: 'GET',
@@ -62,18 +61,10 @@ canGen.getCredit = function(){
 			nojsoncallback: 1
 		}
 	}).then(function(resp){
-		console.log(resp);
 		canGen.userName = resp.person.username._content;
 		$('.right p').html('Background: <a href="https://www.flickr.com/photos/' + canGen.userId + '/' + canGen.photoId + '">' + canGen.titleId + ' by '+ canGen.userName +'</a>');
 	})
 };
-// 		?method=&api_key=fdf547fa76003a11e48d4021845180fb&user_id=" + userId + "&format=json&nojsoncallback=1", function (dota) {
-// 	console.log(dota);
-// 	var userName = dota.person.username._content;
-// 	$('.right p').html('Background: <a href="https://www.flickr.com/photos/' + userId + '/' + photoId + '">' + titleId + ' by '+ userName +'</a>');
-// });
-// 	$('.backgroundContainer').css('background-image', 'linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(' + canGen.finalUrl + ')');
-// }
 
 canGen.generate = function() {
 	var choice = _.random(1);
