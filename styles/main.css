@@ -357,6 +357,12 @@ footer .wrapper .center {
   text-align: center;
 }
 
+@media (max-width: 700px) {
+  footer .wrapper .center {
+    order: -1;
+  }
+}
+
 footer .wrapper .left, footer .wrapper .right, footer .wrapper .center {
   width: 33%;
   margin: 0;
@@ -372,6 +378,12 @@ footer a {
   color: white;
 }
 
+@media (max-width: 700px) {
+  footer a {
+    font-size: 0.9rem;
+  }
+}
+
 footer p {
   font-size: 1rem;
   padding: 0 5px 0;
@@ -380,7 +392,7 @@ footer p {
 
 @media (max-width: 700px) {
   footer p {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     text-align: center;
   }
 }

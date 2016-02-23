@@ -162,6 +162,9 @@ footer {
 	}
 	.center {
 		text-align: center;
+		@media(max-width: 700px) {
+			order: -1;
+		}
 	}
 	.left, .right, .center {
 		width: 33%;
@@ -173,13 +176,16 @@ footer {
 	}
 	a {
 		color: $mainText;
+		@media(max-width: 700px) {
+			font-size: 0.9rem;
+		}
 	}
 	p {
 		font-size: 1rem;
 		padding: 0 5px 0;
 		margin: 0;
 		@media(max-width: 700px) {
-			font-size: 1.2rem;
+			font-size: 0.9rem;
 			text-align: center;
 		}
 	}
