@@ -1,0 +1,23 @@
+{
+  "name": "canlit",
+  "version": "1.0.0",
+  "description": "Live edits of the CanLit Generator site. Check out the site at http://www.canlitgenerator.com",
+  "main": "arrayarchive.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soundslikework/canlitgenerator.git"
+  },
+  "author": "Adam Brady",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soundslikework/canlitgenerator/issues"
+  },
+  "homepage": "https://github.com/soundslikework/canlitgenerator#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1"
+  }
+}
