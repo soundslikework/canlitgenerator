@@ -172,7 +172,9 @@ button {
       width: 50%;
       font-size: 1rem; } }
   button:hover {
-    background: rgba(0, 0, 0, 0.9); }
+    background: rgba(0, 0, 0, 0.9);
+    color: #B3003B;
+    transition: all 1s; }
 
 .italic {
   font-style: italic; }
@@ -184,6 +186,8 @@ button {
 body {
   font-size: 62.5%;
   height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -237,7 +241,7 @@ header {
     margin-bottom: 0; }
     .content p:first-letter {
       font-size: 180%;
-      color: #b3003b;
+      color: #B3003B;
       padding: 10px 0 0 0; }
     @media (max-width: 500px) {
       .content p {
@@ -254,7 +258,8 @@ header {
 
 footer {
   width: 100%;
-  background: rgba(0, 0, 0, 0.8); }
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 0 0; }
   footer .wrapper {
     display: flex;
     flex-direction: row;

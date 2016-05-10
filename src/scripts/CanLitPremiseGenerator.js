@@ -41,15 +41,14 @@ canGen.getPhoto = function(){
 	canGen.secretId = data.photos.photo[canGen.random].secret;
 	canGen.finalUrl = 'http://farm' + canGen.farmId + '.static.flickr.com/' + canGen.serverId + '/' + canGen.photoId + '_' + canGen.secretId + '_b.jpg';
 	canGen.titleId = data.photos.photo[canGen.random].title;
-	$('.backgroundContainer').css('background-image', 'linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(' + canGen.finalUrl + ')');	
+	$('.backgroundContainer').css('background-image', 'linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(' + canGen.finalUrl + ')');
 	}).then(function(){
 	canGen.getCredit();
-		
+
 	});
 };
 
-canGen.getCredit = function(){	
-	console.log(canGen.userId);
+canGen.getCredit = function(){
 	$.ajax({
 		url: 'https://api.flickr.com/services/rest/',
 		method: 'GET',
@@ -62,32 +61,30 @@ canGen.getCredit = function(){
 			nojsoncallback: 1
 		}
 	}).then(function(resp){
-		console.log(resp);
 		canGen.userName = resp.person.username._content;
 		$('.right p').html('Background: <a href="https://www.flickr.com/photos/' + canGen.userId + '/' + canGen.photoId + '">' + canGen.titleId + ' by '+ canGen.userName +'</a>');
-	})
+	});
 };
-// 		?method=&api_key=fdf547fa76003a11e48d4021845180fb&user_id=" + userId + "&format=json&nojsoncallback=1", function (dota) {
-// 	console.log(dota);
-// 	var userName = dota.person.username._content;
-// 	$('.right p').html('Background: <a href="https://www.flickr.com/photos/' + userId + '/' + photoId + '">' + titleId + ' by '+ userName +'</a>');
-// });
-// 	$('.backgroundContainer').css('background-image', 'linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(' + canGen.finalUrl + ')');
-// }
 
 canGen.generate = function() {
+	//controls single or multiple protagonists
 	var choice = _.random(1);
 
+	//controls 'terse' string
+	var terStr = 0;
 	var terseRand = _.random(10);
-		if (terseRand > 9) {
-			var terStr = _.sample(options[choice][4]);
+
+	//controls 'mode of transportation'
+	var modeRand = _.random(10);
+
+		if (terseRand > 8) {
+			terStr = _.sample(options[choice][4]);
 		} else {
 			terStr = options[choice][4][0];
 		}
 
-	var modeRand = _.random(10);
 		if (modeRand > 6) {
-			modStr = _.sample(options[choice][3])
+			modStr = _.sample(options[choice][3]);
 		} else {
 			modStr = options[choice][3][0];
 		}
@@ -96,16 +93,12 @@ canGen.generate = function() {
 		actStr = _.sample(options[choice][1]);
 		reaStr = _.sample(options[choice][2]);
 
-		var nameString = proStr.concat(terStr, actStr, modStr, reaStr)
+		var nameString = proStr.concat(terStr, actStr, modStr, reaStr);
 		var tweetString = nameString.replace(/ /g, "%20");
 
 		console.log(nameString);
 		console.log(tweetString);
-		// if (nameString.length > 200) {
-		// 	$('.content p').css('font-size','2rem');
-		// } else {
-		// 	$('.content p').css('font-size','2.5rem');
-		// };
+
 		$('.content p').html(nameString);
 		$('.tweetButton a').attr("href","https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=" + tweetString + "%20#canlitpremgen&tw_p=tweetbutton&url=http://www.canlitgenerator.com");
 };
