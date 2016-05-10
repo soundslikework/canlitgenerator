@@ -193,6 +193,7 @@ body {
 div.backgroundContainer {
   width: 100%;
   padding: 0.5rem 0 3rem;
+  background: rgba(0, 0, 0, 0.8);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -208,7 +209,7 @@ header {
     right: 5px; }
 
 .wrapper {
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto; }
 
 .main {
@@ -277,7 +278,8 @@ footer {
       margin: 0; }
       @media (max-width: 700px) {
         footer .wrapper .left, footer .wrapper .right, footer .wrapper .center {
-          width: 100%; } }
+          width: 100%;
+          padding: 10px 0; } }
   footer a {
     color: white; }
     @media (max-width: 700px) {

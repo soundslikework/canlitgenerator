@@ -163,9 +163,9 @@ var options = [
 						" hoping to finally and for good reunite Alexisonfire.",
 						" for many years.",
 						", after being blinded by smoke from a wildfire.",
-						" because it's 2016.",
+						// " because it's 2016.",
 						" for... reasons.",
-						" &mdash; except it's in the '30s.'",
+						" &mdash; except it's in the '30s.",
 						" with more than one veiled reference to the Diefenbunker."
 					], [ //SINGLE MODE
 						"",
@@ -328,9 +328,9 @@ var options = [
 						" hoping to finally and for good reunite Alexisonfire.",
 						" for many years.",
 						", after being blinded by smoke from a wildfire.",
-						" because it's 2016.",
+						// " because it's 2016.",
 						" for... reasons.",
-						" &mdash; except it's in the '30s.'",
+						" &mdash; except it's in the '30s.",
 						" with at least one Diefenbunker joke in there."
 						// " after an awkwardly verbose prologue."
 					], [//PLURAL MODE
